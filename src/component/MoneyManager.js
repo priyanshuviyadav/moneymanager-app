@@ -43,13 +43,11 @@ export default function MoneyManager() {
       amount: amountInput,
       type: displayText,
     };
-
-    setTransactionList((data) => ({
-      transactionsList: [...data.transactionsList, newTransaction],
-      titleInput: "",
-      amountInput: "",
-      optionId: transactionTypeOptions[0].optionId,
-    }));
+    console.log(newTransaction);
+    setTransactionList([...transactionsList, newTransaction]);
+    setAmountInput("");
+    setTitleInput("");
+    setOptionId("");
   };
 
   const handleOptionId = (event) => {
