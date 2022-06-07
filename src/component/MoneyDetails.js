@@ -6,23 +6,38 @@ export default function MoneyDetails({
   expensesAmount,
 }) {
   return (
-    <div className="flex flex-row ">
-      <div className="border-2 rounded-2xl font-bold text-black text-center  flex  flex-col justify-around align-center px-2 py-2 mx-10 my-10 w-1/6 bg-blue-200 ">
+    <div className="money-details-container ">
+      <div className=" balance-container">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/money-manager/balance-image.png"
+          alt="balance"
+          className="details-img"
+        />
         <div>
-          <p>Your Balance</p>
-          <p>Rs {balanceAmount}</p>
+          <p className="details-text">Your Balance</p>
+          <p className="details-money">Rs {balanceAmount}</p>
         </div>
       </div>
-      <div className="border-2 rounded-2xl font-bold text-black  text-center flex  flex-col justify-around align-center px-2 py-2 mx-10 my-10 w-1/6   bg-blue-200">
+      <div className="income-container">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/money-manager/income-image.png"
+          alt="income"
+          className="details-img"
+        />
         <div>
-          <p>Your Income</p>
-          <p>Rs {incomeAmount}</p>
+          <p className="details-text">Your Income</p>
+          <p className="details-money">Rs {incomeAmount}</p>
         </div>
       </div>
-      <div className="border-2 rounded-2xl font-bold text-black text-center flex  flex-col justify-around  px-2 py-2 mx-10 my-10 w-1/6 bg-blue-200">
+      <div className="expenses-container">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/money-manager/expenses-image.png"
+          alt="expenses"
+          className="details-img"
+        />
         <div>
-          <p>Your Expenses</p>
-          <p>Rs {expensesAmount}</p>
+          <p className="details-text">Your Expenses</p>
+          <p className="details-money">Rs {expensesAmount}</p>
         </div>
       </div>
     </div>

@@ -11,24 +11,23 @@ export default function TransactionItem({
   };
 
   return (
-    <>
-      <div className="table-fixed flex flex-col justify-row 	">
-        <li className="flex flex-col justify-items-start list-none mx-5 my-5 px-2 mt-2 py-2 space-y-1 font-bold text-xs text-justify ">
-          <p>{title}</p>
-          <p>Rs {amount}</p>
-          <p>{type}</p>
-
-          <div>
-            <button
-              className="border-2 border-solid rounded-xl bg-black text-white font-bold"
-              type="button"
-              onClick={onDeleteTransaction}
-            >
-              delete
-            </button>
-          </div>
-        </li>
+    <li className="table-row">
+      <p className="transaction-text">{title}</p>
+      <p className="transaction-text">Rs {amount}</p>
+      <p className="transaction-text">{type}</p>
+      <div className="delete-container">
+        <button
+          className="delete-button"
+          type="button"
+          onClick={onDeleteTransaction}
+        >
+          <img
+            className="delete-img"
+            src="https://assets.ccbp.in/frontend/react-js/money-manager/delete.png"
+            alt="delete"
+          />
+        </button>
       </div>
-    </>
+    </li>
   );
 }
